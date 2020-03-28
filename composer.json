@@ -1,0 +1,14 @@
+{
+    "name": "tomasnorre/ddev-codeception-tests",
+    "description": "TYPO3 CMS Base Distribution",
+    "license": "GPL-2.0-or-later",
+    "config": {
+        "platform": {
+            "php": "7.2"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-webdriver": "^1.0.0"
+    }
+}
