@@ -1,0 +1,43 @@
+language: php
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+
+before_install:
+  # turn off XDebug for speed up
+  - phpenv config-rm xdebug.ini || return 0
+
+addons:
+  apt:
+    packages:
+      - parallel
+
+php:
+  - '7.2'
+
+services:
+  - docker
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_script:
+  - date
+
+script:
+  - unmame -a
+  - uptime
+
+jobs:
+  fast_finish: true
+  include:
+    -
+      stage: Tests
+      name: "Code ception"
+      script:
+        - composer self-update
+        - composer --version
+
