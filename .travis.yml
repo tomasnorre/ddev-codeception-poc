@@ -51,5 +51,3 @@ jobs:
         - ./ddev --version
         - ./ddev start
         - php vendor/bin/codecept run
-
-
