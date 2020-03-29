@@ -17,7 +17,7 @@ addons:
       - wget
 
 php:
-  - '7.2'
+  - '7.4'
 
 services:
   - docker
@@ -47,8 +47,9 @@ jobs:
       stage: Tests
       name: "Code ception"
       script:
+        - composer install
         - ./ddev --version
         - ./ddev start
-        - docker ps
+        - php vendor/bin/codecept run
 
 
