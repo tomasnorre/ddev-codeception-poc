@@ -32,9 +32,9 @@ before_script:
   - docker-compose --version
   - wget https://github.com/drud/ddev/releases/download/v1.13.1/ddev_linux.v1.13.1.tar.gz
   - tar vxzf ddev_linux.v1.13.1.tar.gz
-  - ls -l ddev_linux.v1.13.1/
-  #- mkcert -install
-
+  - chmod +x ddev
+  - chmod +x mkcert
+  - mkcert -install
 
 jobs:
   fast_finish: true
@@ -44,5 +44,7 @@ jobs:
       name: "Code ception"
       script:
         - ddev --version
+        - ddev start
+        - docker ps
 
 
