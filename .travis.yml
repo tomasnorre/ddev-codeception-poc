@@ -15,6 +15,7 @@ addons:
     packages:
       - linuxbrew-wrapper
       - wget
+      - docker-ce
 
 php:
   - '7.2'
