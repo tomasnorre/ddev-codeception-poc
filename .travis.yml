@@ -12,7 +12,7 @@ before_install:
 addons:
   apt:
     packages:
-      - parallel
+      - linuxbrew-wrapper
 
 php:
   - '7.2'
