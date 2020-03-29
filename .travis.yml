@@ -1,4 +1,5 @@
 language: php
+dist: bionic
 
 notifications:
   email:
@@ -29,7 +30,7 @@ before_script:
   - sudo chmod +x /usr/local/bin/docker-compose
   - docker-compose --version
   - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  - brew tap drud/ddev && brew install ddev
+  - brew tap drud/ddev && brew install ddev --force
   - ddev --version
   - mkcert -install
 
