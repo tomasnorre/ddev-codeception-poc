@@ -14,6 +14,7 @@ addons:
   apt:
     packages:
       - linuxbrew-wrapper
+      - wget
 
 php:
   - '7.2'
@@ -29,7 +30,7 @@ before_script:
   - sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   - sudo chmod +x /usr/local/bin/docker-compose
   - docker-compose --version
-  - curl https://github.com/drud/ddev/releases/download/v1.13.1/ddev_linux.v1.13.1.tar.gz
+  - wget https://github.com/drud/ddev/releases/download/v1.13.1/ddev_linux.v1.13.1.tar.gz
   - tar vxzf ddev_linux.v1.13.1.tar.gz
   - ls -l ddev_linux.v1.13.1/
   #- mkcert -install
