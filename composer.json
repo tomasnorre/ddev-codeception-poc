@@ -1,6 +1,6 @@
 {
-    "name": "tomasnorre/ddev-codeception-tests",
-    "description": "TYPO3 CMS Base Distribution",
+    "name": "tomasnorre/ddev-codeception-poc",
+    "description": "DDEV Codeception PoC - Show how DDEV and Codeception can work together to make your behaviour driven tests run locally and in Travis CI",
     "license": "GPL-2.0-or-later",
     "config": {
         "platform": {
