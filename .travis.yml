@@ -10,12 +10,6 @@ before_install:
   # turn off XDebug for speed up
   - phpenv config-rm xdebug.ini || return 0
 
-addons:
-  apt:
-    packages:
-      - linuxbrew-wrapper
-      - wget
-
 php:
   - '7.4'
 
