@@ -11,4 +11,13 @@ class DemoCest
         $I->amOnPage('/index.php');
         $I->canSee('PHP Version 8.3');
     }
+
+    public function canCloseConfirmPopUp(AcceptanceTester $I)
+    {
+        $I->amOnPage('/index.html');
+        $I->canSee('Click Me');
+        $I->click('Click Me');
+        $I->seeInPopup('Are you sure?');
+        $I->acceptPopup();
+    }
 }
