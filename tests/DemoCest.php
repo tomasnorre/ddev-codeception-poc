@@ -1,5 +1,5 @@
 <?php
-class LoginCest 
+class DemoCest 
 {    
     public function _before(AcceptanceTester $I)
     {
@@ -9,6 +9,6 @@ class LoginCest
     public function canSeePHPVersion(AcceptanceTester $I)
     {
         $I->amOnPage('/index.php');
-        $I->canSee('PHP Version 7.4.3');
+        $I->canSee('PHP Version 8.3');
     }
 }
